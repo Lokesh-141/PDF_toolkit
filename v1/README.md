@@ -25,10 +25,6 @@ outputs/
 ├── reports/ # Scan reports in PDF format
 ├── json/ # (Optional) Exported metadata in JSON
 
-perl
-Copy
-Edit
-
 ## 🚀 Usage
 
 Run the script directly:

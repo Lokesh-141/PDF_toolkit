@@ -14,13 +14,13 @@ Universal PDF Toolkit is a Python-based command-line utility that converts Offic
 
 **📑 Merge PDFs**
 
-Combine multiple PDF files into a single document
+- Combine multiple PDF files into a single document
 
 **🧪 Deep**
 
-Analyze any file to extract metadata and a hex preview (first 256 bytes)
+- Analyze any file to extract metadata and a hex preview (first 256 bytes)
 
-Generate a clean PDF report from the scan
+- Generate a clean PDF report from the scan
 
 ---
 
@@ -89,7 +89,7 @@ outputs/logs/tool.log
 ---
 
 ## 📦 JSON Export
-If `ENABLE_JSON_EXPORT = True` in the script, scan and file metadata are also saved to:
+If `ENABLE_JSON_EXPORT = True` in the script, scan and file `metadata` are also saved to:
 ```
 outputs/json/
 ```
@@ -105,7 +105,8 @@ outputs/json/
 
 ## 📃 License
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+---
 
--
 Built to automate your file conversions, PDF merges, and forensic file reporting.
+
 ---

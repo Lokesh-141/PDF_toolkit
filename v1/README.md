@@ -2,28 +2,38 @@
 
 A powerful Python-based utility that converts various file formats to PDF, merges PDFs, and performs deep file scans to generate forensic-style reports.
 
+---
+
 ## ✨ Features
 
 - 📄 **Convert to PDF**:
-  - Office files: `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
-  - Image files: `.jpg`, `.jpeg`, `.png`
-  - Source code files: `.py`, `.js`, `.html`, `.java`, etc., with syntax highlighting
+  - Office documents: `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
+  - Images: `.jpg`, `.jpeg`, `.png`
+  - Source code with syntax highlighting: `.py`, `.js`, `.html`, `.java`, `.css`, `.json`, etc.
 
 - 📑 **Merge PDFs**:
-  - Combine multiple PDFs into a single file
+  - Combine multiple PDFs into a single document
 
 - 🧪 **Deep Scan**:
-  - Generates a report containing file metadata and a hex preview
+  - Generate a detailed PDF report including metadata and hex preview of any file
+
+---
 
 ## 📁 Output Structure
 
-Upon running, the tool auto-generates an `outputs/` folder containing:
+The script creates an `outputs/` directory automatically with the following subfolders:
 
 outputs/
 ├── pdfs/ # Converted PDF files
-├── logs/ # Tool logs (tool.log)
-├── reports/ # Scan reports in PDF format
-├── json/ # (Optional) Exported metadata in JSON
+├── logs/ # Logs (tool.log)
+├── reports/ # Deep scan reports (PDF)
+├── json/ # Optional JSON metadata (if enabled)
+
+yaml
+Copy
+Edit
+
+---
 
 ## 🚀 Usage
 
@@ -31,7 +41,7 @@ Run the script directly:
 
 ```bash
 python your_script_name.py
-Then follow the menu prompts:
+Follow the interactive menu:
 
 mathematica
 Copy
@@ -42,39 +52,54 @@ Edit
 3. Deep Scan & Generate Report
 4. Exit
 🛠 Requirements
-Install dependencies using pip:
+Install required Python packages:
 
 bash
 Copy
 Edit
 pip install pillow pdfkit python-magic PyPDF2 pygments reportlab comtypes
-Also ensure you have:
+Also ensure:
 
-wkhtmltopdf installed for pdfkit to work
+✅ wkhtmltopdf is installed (required for code-to-PDF conversion)
 
-Windows system (for Office automation via comtypes)
+✅ You're using Windows, as Office automation via comtypes only works there
 
-🧠 Behind the Scenes
-Office file conversion uses COM automation (via comtypes) — Windows-only
+🧠 How It Works
+📄 Office to PDF: Uses COM automation (comtypes) to convert Office files (Windows only)
 
-Code-to-PDF uses Pygments for syntax highlighting and wkhtmltopdf for rendering
+🖼️ Image to PDF: Uses Pillow (PIL.Image)
 
-Deep scan uses magic for MIME type detection and ReportLab for PDF report generation
+💻 Code to PDF: Uses Pygments + pdfkit + wkhtmltopdf to generate syntax-highlighted PDFs
+
+🔍 Deep Scan: Uses python-magic to detect MIME type and ReportLab to generate a PDF report
 
 📝 Logging
-All operations and errors are logged to:
+All activity and errors are recorded in:
 
 bash
 Copy
 Edit
 outputs/logs/tool.log
 📦 JSON Export
-If ENABLE_JSON_EXPORT = True is set, metadata and reports can optionally be exported to outputs/json/.
+If ENABLE_JSON_EXPORT = True in the script, metadata and scan results can be exported to:
 
-⚠️ Platform Notes
-The tool is designed for Windows, due to reliance on Office COM interfaces.
+bash
+outputs/json/
+⚠️ Platform Compatibility
+⚠️ This tool is designed for Windows only, due to reliance on COM interfaces for Office automation.
 
-On macOS/Linux, Office file conversion will not function unless alternatives are implemented (e.g., LibreOffice via subprocess).
+To use it on macOS/Linux:
+
+Replace Office automation with alternatives like LibreOffice via subprocess
+
+Keep image, code, and scan features — those are cross-platform
+
+---
 
 📃 License
-MIT License — use freely and modify as needed.
+MIT License — Free to use, modify, and distribute.
+
+---
+
+Made with 🛠️ and ☕ by a Developer Who Hates Manual File Conversion
+---

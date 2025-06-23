@@ -88,7 +88,7 @@ outputs/logs/tool.log
 ---
 
 ## 📦 JSON Export
-If ```ENABLE_JSON_EXPORT = True``` in the script, scan and file metadata are also saved to:
+If `ENABLE_JSON_EXPORT = True` in the script, scan and file metadata are also saved to:
 ```
 outputs/json/
 ```

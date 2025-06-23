@@ -97,9 +97,9 @@ outputs/json/
 ---
 
 ## ⚠️ Platform Support
-**✅ Windows:** Full support (including Office conversion)
+**🪟 Windows:** Full support (including Office conversion)
 
-**⚠️ Linux / macOS:** Partial support (Office-to-PDF won't work without adaptation)
+**🐧 Linux / macOS:** Partial support (Office-to-PDF won't work without adaptation)
 
 ---
 

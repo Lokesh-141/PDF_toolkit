@@ -1,75 +1,45 @@
+
+markdown
+Copy
+Edit
 # 🧰 Universal PDF Toolkit
 
-A versatile command-line utility to convert files to PDF, merge PDFs, and perform deep scans on files to generate forensic-style reports. Supports Office documents, images, and code files with syntax highlighting.
+A powerful Python-based utility that converts various file formats to PDF, merges PDFs, and performs deep file scans to generate forensic-style reports.
 
----
+## ✨ Features
 
-## 🚀 Features
+- 📄 **Convert to PDF**:
+  - Office files: `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
+  - Image files: `.jpg`, `.jpeg`, `.png`
+  - Source code files: `.py`, `.js`, `.html`, `.java`, etc., with syntax highlighting
 
-- **📄 Convert to PDF**
-  - Word: `.doc`, `.docx`
-  - Excel: `.xls`, `.xlsx`
-  - PowerPoint: `.ppt`, `.pptx`
-  - Images: `.jpg`, `.jpeg`, `.png`
-  - Code/Text: `.py`, `.js`, `.html`, `.css`, `.md`, `.txt`, etc. with syntax highlighting
+- 📑 **Merge PDFs**:
+  - Combine multiple PDFs into a single file
 
-- **📎 Merge PDFs**
-  - Combine multiple PDF files into a single document
+- 🧪 **Deep Scan**:
+  - Generates a report containing file metadata and a hex preview
 
-- **🔍 Deep Scan Mode**
-  - Generates a PDF report with:
-    - File name, size, modified time, MIME type
-    - Hex dump preview (first 256 bytes)
+## 📁 Output Structure
 
-- **🗂 Structured Output**
-  - Automatically creates folders:
-    - `outputs/pdfs/`
-    - `outputs/logs/`
-    - `outputs/reports/`
-    - `outputs/json/` (if enabled)
+Upon running, the tool auto-generates an `outputs/` folder containing:
 
----
+outputs/
+├── pdfs/ # Converted PDF files
+├── logs/ # Tool logs (tool.log)
+├── reports/ # Scan reports in PDF format
+├── json/ # (Optional) Exported metadata in JSON
 
-## 🛠 Requirements
+perl
+Copy
+Edit
 
-- **Python 3.7+**
-- **Windows OS only** (for Office conversion)
-- **Microsoft Office** (Word, Excel, PowerPoint)
-- **[wkhtmltopdf](https://wkhtmltopdf.org/downloads.html)** installed and available in PATH (for code → PDF)
+## 🚀 Usage
 
-### Install Python Dependencies
+Run the script directly:
 
 ```bash
-pip install -r requirements.txt
-requirements.txt
-
-matlab
-Copy
-Edit
-reportlab
-PyPDF2
-Pillow
-pygments
-pdfkit
-python-magic
-comtypes
-📂 Output Structure
-bash
-Copy
-Edit
-outputs/
-├── pdfs/       # Converted PDFs
-├── logs/       # Log file (tool.log)
-├── reports/    # Scan reports
-└── json/       # Optional metadata exports
-🖥️ How to Use
-Run the script:
-
-bash
-Copy
-Edit
-python main.py
-You'll see a menu:
+python your_script_name.py
+Then follow the menu prompts:
 
 mathematica
 Copy
@@ -79,37 +49,40 @@ Edit
 2. Merge Multiple PDFs
 3. Deep Scan & Generate Report
 4. Exit
-💡 Example Use Cases
-Convert slides.pptx to slides.pdf
+🛠 Requirements
+Install dependencies using pip:
 
-Merge intro.pdf, chapter1.pdf into book.pdf
-
-Scan suspicious.exe and generate a forensic-style PDF report
-
-⚙️ Configuration
-You can customize the following options in the script:
-
-python
+bash
 Copy
 Edit
-ENABLE_JSON_EXPORT = True
-OUTPUT_DIR = "outputs"
-⚠ Limitations
-Office file conversion works only on Windows with Microsoft Office installed
+pip install pillow pdfkit python-magic PyPDF2 pygments reportlab comtypes
+Also ensure you have:
 
-Code-to-PDF conversion requires wkhtmltopdf binary installed
+wkhtmltopdf installed for pdfkit to work
 
-📄 License
-This project is licensed under the MIT License.
+Windows system (for Office automation via comtypes)
 
-🤝 Contributions
-Pull requests and issues are welcome! Please open one if you have a feature suggestion or bug to report.
+🧠 Behind the Scenes
+Office file conversion uses COM automation (via comtypes) — Windows-only
 
-python
+Code-to-PDF uses Pygments for syntax highlighting and wkhtmltopdf for rendering
+
+Deep scan uses magic for MIME type detection and ReportLab for PDF report generation
+
+📝 Logging
+All operations and errors are logged to:
+
+bash
 Copy
 Edit
+outputs/logs/tool.log
+📦 JSON Export
+If ENABLE_JSON_EXPORT = True is set, metadata and reports can optionally be exported to outputs/json/.
 
----
-📄 License
-This project is licensed under the MIT License.
----
+⚠️ Platform Notes
+The tool is designed for Windows, due to reliance on Office COM interfaces.
+
+On macOS/Linux, Office file conversion will not function unless alternatives are implemented (e.g., LibreOffice via subprocess).
+
+📃 License
+MIT License — use freely and modify as needed.

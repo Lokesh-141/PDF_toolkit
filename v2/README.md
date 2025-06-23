@@ -52,9 +52,9 @@ pip install pillow pdfkit python-magic PyPDF2 pygments reportlab comtypes
 ## 📦 External Dependency
 💡 wkhtmltopdf is required for code-to-PDF conversion using pdfkit.
 
-Download it here: https://wkhtmltopdf.org/downloads.html
+(Download it here)[https://wkhtmltopdf.org/downloads.html]
 
-Ensure wkhtmltopdf is available in your system’s PATH.
+Ensure `wkhtmltopdf` is available in your system’s `PATH`.
 
 📁 Folder Structure
 The tool creates the following directory layout automatically:

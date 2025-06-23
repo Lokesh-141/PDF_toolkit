@@ -35,12 +35,12 @@ outputs/
 ├── json/       # Optional: Metadata and scan results in JSON
 ```
 
-**🚀 Getting Started**
+## 🚀 Getting Started
 **✅ Prerequisites**
 
-- Python 3.7 or higher
+- 🐍 Python 3.7 or higher
 
-- Windows OS (required for Office-to-PDF conversion)
+- 🪟 Windows OS (required for Office-to-PDF conversion)
 
 - [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) installed and available in system PATH
 

@@ -1,7 +1,3 @@
-
-markdown
-Copy
-Edit
 # 🧰 Universal PDF Toolkit
 
 A powerful Python-based utility that converts various file formats to PDF, merges PDFs, and performs deep file scans to generate forensic-style reports.

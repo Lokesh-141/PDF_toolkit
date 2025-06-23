@@ -6,17 +6,17 @@ Universal PDF Toolkit is a Python-based command-line utility that converts Offic
 ## ✨ Features
 📄 **Convert to PDF**
 
-**Office documents:** .doc, .docx, .xls, .xlsx, .ppt, .pptx
+**Office documents:** `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
 
-**Images:** .jpg, .jpeg, .png
+**Images:** `.jpg`, `.jpeg`, `.png`
 
-**Source code (with syntax highlighting):** .py, .js, .html, .java, .css, .json, .md, etc.
+**Source code (with syntax highlighting):** `.py`, `.js`, `.html`, `.java`, `.css`, `.json`, `.md`, etc.
 
 **📑 Merge PDFs**
 
 Combine multiple PDF files into a single document
 
-**🧪 Deep **
+**🧪 Deep**
 
 Analyze any file to extract metadata and a hex preview (first 256 bytes)
 
@@ -25,7 +25,7 @@ Generate a clean PDF report from the scan
 ---
 
 ## 📂 Output Directory Structure
-After running, the tool creates the following folders inside outputs/:
+After running, the tool creates the following folders inside `outputs/`:
 
 ```
 outputs/
@@ -37,11 +37,12 @@ outputs/
 
 **🚀 Getting Started**
 **✅ Prerequisites**
-Python 3.7 or higher
 
-Windows OS (required for Office-to-PDF conversion)
+- Python 3.7 or higher
 
-wkhtmltopdf installed and available in system PATH
+- Windows OS (required for Office-to-PDF conversion)
+
+- [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) installed and available in system PATH
 
 ---
 
@@ -105,5 +106,6 @@ outputs/json/
 ## 📃 License
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
+-
 Built to automate your file conversions, PDF merges, and forensic file reporting.
 ---

@@ -31,11 +31,8 @@ outputs/
 
 **🚀 Getting Started**
 **✅ Prerequisites**
-
 - Python 3.7 or higher
-
 - Windows OS (required for Office-to-PDF conversion)
-
 - [wkhtmltopdf](https://wkhtmltopdf.org/downloads.html) installed and available in system PATH
 
 ---

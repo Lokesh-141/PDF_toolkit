@@ -4,23 +4,23 @@ Universal PDF Toolkit is a Python-based command-line utility that converts Offic
 ---
 
 ## ✨ Features
-📄 **Convert to PDF**
+- 📄 **Convert to PDF**
 
-- **Office documents:** `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
+  - **Office documents:** `.doc`, `.docx`, `.xls`, `.xlsx`, `.ppt`, `.pptx`
+  
+  - **Images:** `.jpg`, `.jpeg`, `.png`
+  
+  - **Source code (with syntax highlighting):** `.py`, `.js`, `.html`, `.java`, `.css`, `.json`, `.md`, etc.
 
-- **Images:** `.jpg`, `.jpeg`, `.png`
+- **📑 Merge PDFs**
 
-- **Source code (with syntax highlighting):** `.py`, `.js`, `.html`, `.java`, `.css`, `.json`, `.md`, etc.
+  - Combine multiple PDF files into a single document
 
-**📑 Merge PDFs**
+- **🧪 Deep**
 
-- Combine multiple PDF files into a single document
-
-**🧪 Deep**
-
-- Analyze any file to extract metadata and a hex preview (first 256 bytes)
-
-- Generate a clean PDF report from the scan
+  - Analyze any file to extract metadata and a hex preview (first 256 bytes)
+  
+  - Generate a clean PDF report from the scan
 
 ---
 
